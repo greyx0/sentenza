@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3grjs10oqgk"]
+
+[ext_resource type="Script" uid="uid://blphqbjumc6ho" path="res://scripts/porta_spazzolini.gd" id="1_8qs5r"]
+[ext_resource type="Texture2D" uid="uid://dbweupt1lre52" path="res://asset_2d/interactables/porta_spazzolino/porta_spazzolini.png" id="1_ov5bt"]
+[ext_resource type="Texture2D" uid="uid://x7brv6qfbbfx" path="res://asset_2d/interactables/porta_spazzolino/porta_spazzolini_1.png" id="2_8qs5r"]
+[ext_resource type="Resource" uid="uid://bhsnjan8cdqyw" path="res://dialogues/spazzolini.dialogue" id="2_qf0d3"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_rb1qw"]
+[ext_resource type="Texture2D" uid="uid://cc00e5apilxwo" path="res://asset_2d/interactables/porta_spazzolino/porta_spazzolini_2.png" id="3_qf0d3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rb1qw"]
+size = Vector2(32, 43)
+
+[node name="porta_spazzolini" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
+script = ExtResource("1_8qs5r")
+hover_cursor = ExtResource("2_rb1qw")
+dialogue_resource = ExtResource("2_qf0d3")
+ui_preview_rect = NodePath("CanvasLayer/CenterContainer/TextureRect")
+
+[node name="porta_spazzolini" type="Sprite2D" parent="."]
+texture = ExtResource("1_ov5bt")
+
+[node name="porta_spazzolini_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_8qs5r")
+
+[node name="porta_spazzolini_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_qf0d3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_rb1qw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5

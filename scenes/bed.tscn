@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsdj2ewm07w0i"]
+
+[ext_resource type="Script" uid="uid://dk4f1t10wmos0" path="res://scripts/bed.gd" id="1_853xm"]
+[ext_resource type="Texture2D" uid="uid://bwn3utgh6vk4a" path="res://asset_2d/tiles/letto_vestito_1.png" id="2_853xm"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_exsg2"]
+[ext_resource type="Resource" uid="uid://uhso0dib2qpr" path="res://dialogues/bed.dialogue" id="2_x7btf"]
+[ext_resource type="Texture2D" uid="uid://ctbu5guplk5rj" path="res://asset_2d/tiles/letto_vestito.png" id="3_exsg2"]
+[ext_resource type="Texture2D" uid="uid://cc4sh4lm7fjh3" path="res://asset_2d/tiles/letto_vestito_2.png" id="3_x7btf"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pfx57"]
+a = Vector2(53.510254, -37.704803)
+b = Vector2(20.19831, 24.900372)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x7btf"]
+
+[node name="bed" type="StaticBody2D"]
+z_index = 1
+script = ExtResource("1_853xm")
+hover_cursor = ExtResource("2_exsg2")
+dialogue_resource = ExtResource("2_x7btf")
+
+[node name="bed" type="Sprite2D" parent="."]
+z_index = 2
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-13, 58)
+texture = ExtResource("3_exsg2")
+region_rect = Rect2(0, 0, 160, 116)
+
+[node name="bed_1" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-13, 58)
+texture = ExtResource("2_853xm")
+region_rect = Rect2(0, 0, 160, 116)
+
+[node name="bed_2" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-13, 58)
+texture = ExtResource("3_x7btf")
+region_rect = Rect2(0, 0, 160, 116)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.0000019, 62)
+rotation = -5.664092
+shape = SubResource("SegmentShape2D_pfx57")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="dress_collision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(34.000004, 62.000004)
+rotation = -2.5224993
+scale = Vector2(3.3847716, 2.1652706)
+shape = SubResource("CircleShape2D_x7btf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(37, 74)
+rotation = -7.8408704
+shape = SubResource("SegmentShape2D_pfx57")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-23, 114)
+rotation = -7.8408704
+shape = SubResource("SegmentShape2D_pfx57")

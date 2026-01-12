@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsmvdguk4gkti"]
+
+[ext_resource type="Script" uid="uid://cc8wbvn2mia6s" path="res://scripts/casa.gd" id="1_d31c8"]
+[ext_resource type="Texture2D" uid="uid://da54nsl2ubicq" path="res://asset_2d/interactables/casa/casa.png" id="2_6lyl3"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_c3ews"]
+[ext_resource type="Resource" uid="uid://cebfr8eap02is" path="res://dialogues/house.dialogue" id="2_sje03"]
+[ext_resource type="Texture2D" uid="uid://c5kim24joqxv3" path="res://asset_2d/interactables/casa/casa_1.png" id="3_sje03"]
+[ext_resource type="Texture2D" uid="uid://iiw6op2b3yvg" path="res://asset_2d/interactables/casa/casa_2.png" id="4_c3ews"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3anh"]
+resource_local_to_scene = true
+size = Vector2(64, 40)
+
+[node name="casa" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
+script = ExtResource("1_d31c8")
+hover_cursor = ExtResource("2_c3ews")
+dialogue_resource = ExtResource("2_sje03")
+ui_preview_rect = NodePath("CanvasLayer/CenterContainer/TextureRect")
+
+[node name="casa_0" type="Sprite2D" parent="."]
+texture = ExtResource("2_6lyl3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_g3anh")
+
+[node name="casa_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_sje03")
+
+[node name="casa_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_c3ews")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5

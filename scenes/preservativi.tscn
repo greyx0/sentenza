@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjgu17i06m1h3"]
+
+[ext_resource type="Script" uid="uid://jjmaguwxfpe2" path="res://scripts/preservativi.gd" id="1_2kohi"]
+[ext_resource type="Texture2D" uid="uid://vovjea1ax8ic" path="res://asset_2d/interactables/preservativi/preservativi_scatola.png" id="1_ok215"]
+[ext_resource type="Texture2D" uid="uid://br24ixudnmd7d" path="res://asset_2d/interactables/preservativi/preservativi_scatola_1.png" id="2_2kohi"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_m70u2"]
+[ext_resource type="Resource" uid="uid://c55ui21c3bm2l" path="res://dialogues/preservativi.dialogue" id="2_vrwhe"]
+[ext_resource type="Texture2D" uid="uid://dgs2ro2wllvux" path="res://asset_2d/interactables/preservativi/preservativi_scatola_2.png" id="3_vrwhe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m70u2"]
+size = Vector2(22, 20)
+
+[node name="preservativi" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
+script = ExtResource("1_2kohi")
+hover_cursor = ExtResource("2_m70u2")
+dialogue_resource = ExtResource("2_vrwhe")
+ui_preview_rect = NodePath("CanvasLayer/CenterContainer/TextureRect")
+
+[node name="preservativi" type="Sprite2D" parent="."]
+texture = ExtResource("1_ok215")
+
+[node name="preservativi_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_2kohi")
+
+[node name="preservativi_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_vrwhe")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(13, -15)
+shape = SubResource("RectangleShape2D_m70u2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5

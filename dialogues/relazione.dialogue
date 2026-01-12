@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Get married
+	S.: .
+	do trigger_sequence_rela_2(2)
+- Leave her
+	S.: .
+	do trigger_sequence_rela_1(1)

@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Forget about it
+	S.: .
+	do trigger_sequence_orsetto_2(2)
+- Buy a similar one
+	S.: .
+	do trigger_sequence_orsetto_1(1)

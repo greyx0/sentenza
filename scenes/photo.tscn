@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://dakbroqn1lavq"]
+
+[ext_resource type="Texture2D" uid="uid://cjvq54nhguo8e" path="res://asset_2d/interactables/photo.png" id="1_7jgq4"]
+[ext_resource type="Script" uid="uid://bt8y7ffy468j4" path="res://scripts/photo.gd" id="1_35foj"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_7ensy"]
+[ext_resource type="Resource" uid="uid://bsma1hcpbeqg6" path="res://dialogues/photo.dialogue" id="2_vv5lh"]
+[ext_resource type="Texture2D" uid="uid://bor4kffpnlwht" path="res://asset_2d/interactables/photo_framed.png" id="4_nnfc5"]
+[ext_resource type="Texture2D" uid="uid://bcndtr3lsh1rj" path="res://asset_2d/interactables/photo_burnt.png" id="5_7ensy"]
+
+[sub_resource type="Animation" id="Animation_vv5lh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_35foj"]
+resource_name = "photo_idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0rg5a"]
+_data = {
+&"RESET": SubResource("Animation_vv5lh"),
+&"photo_idle": SubResource("Animation_35foj")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jgq4"]
+resource_local_to_scene = true
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
+y_sort_enabled = true
+script = ExtResource("1_35foj")
+hover_cursor = ExtResource("2_7ensy")
+dialogue_resource = ExtResource("2_vv5lh")
+ui_preview_rect = NodePath("CanvasLayer/CenterContainer/TextureRect")
+
+[node name="photo" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_7jgq4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="photo"]
+libraries = {
+&"": SubResource("AnimationLibrary_0rg5a")
+}
+autoplay = "photo_idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7jgq4")
+
+[node name="photo_framed" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_nnfc5")
+
+[node name="photo_burned" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_7ensy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5

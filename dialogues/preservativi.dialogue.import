@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c55ui21c3bm2l"
+path="res://.godot/imported/preservativi.dialogue-deed9e22045f64908df93e40ce33525b.tres"
+
+[deps]
+
+source_file="res://dialogues/preservativi.dialogue"
+dest_files=["res://.godot/imported/preservativi.dialogue-deed9e22045f64908df93e40ce33525b.tres"]
+
+[params]
+
+defaults=true

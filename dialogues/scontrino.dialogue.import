@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://yios41x2imvb"
+path="res://.godot/imported/scontrino.dialogue-89d5610040da84db46f66e867623e9aa.tres"
+
+[deps]
+
+source_file="res://dialogues/scontrino.dialogue"
+dest_files=["res://.godot/imported/scontrino.dialogue-89d5610040da84db46f66e867623e9aa.tres"]
+
+[params]
+
+defaults=true

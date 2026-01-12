@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dnjht3s5uqlqt"
+path="res://.godot/imported/orsetto.dialogue-35e9c162987634dbd679edb5d12cd84c.tres"
+
+[deps]
+
+source_file="res://dialogues/orsetto.dialogue"
+dest_files=["res://.godot/imported/orsetto.dialogue-35e9c162987634dbd679edb5d12cd84c.tres"]
+
+[params]
+
+defaults=true

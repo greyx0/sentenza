@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://btd5u3si74s0p"]
+
+[ext_resource type="Script" uid="uid://iceb2lvjog0i" path="res://scripts/relazione.gd" id="1_isx86"]
+[ext_resource type="Texture2D" uid="uid://cgjy4vtjk6n70" path="res://asset_2d/interactables/relazione/relazione.png" id="1_yy4ed"]
+[ext_resource type="Texture2D" uid="uid://b27wm0tgxy6x1" path="res://asset_2d/interactables/relazione/relazione_1.png" id="2_isx86"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_lle4v"]
+[ext_resource type="Resource" uid="uid://is444qsyrpnx" path="res://dialogues/relazione.dialogue" id="2_solxo"]
+[ext_resource type="Texture2D" uid="uid://b0mbovepuhghr" path="res://asset_2d/interactables/relazione/relazione_2.png" id="3_solxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lle4v"]
+size = Vector2(42, 44)
+
+[node name="relazione" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
+script = ExtResource("1_isx86")
+hover_cursor = ExtResource("2_lle4v")
+dialogue_resource = ExtResource("2_solxo")
+ui_preview_rect = NodePath("CanvasLayer/CenterContainer/TextureRect")
+
+[node name="relazione" type="Sprite2D" parent="."]
+texture = ExtResource("1_yy4ed")
+
+[node name="relazione_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_isx86")
+
+[node name="relazione_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_solxo")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -10)
+shape = SubResource("RectangleShape2D_lle4v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5

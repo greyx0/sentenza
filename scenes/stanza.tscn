@@ -1,0 +1,208 @@
+[gd_scene load_steps=23 format=4 uid="uid://ckpveb7d6jmji"]
+
+[ext_resource type="Texture2D" uid="uid://b1bieqrs8wasy" path="res://asset_2d/tiles/sentenza_tilemap.png" id="1_ofuf1"]
+[ext_resource type="Texture2D" uid="uid://biwy60n1dqkth" path="res://asset_2d/tiles/oggetti_muro.png" id="2_rkpo5"]
+[ext_resource type="PackedScene" uid="uid://cwh0yt14xbyfs" path="res://scenes/character.tscn" id="2_u5grw"]
+[ext_resource type="Texture2D" uid="uid://dasodloicvcwi" path="res://asset_2d/tiles/mobile_1.png" id="3_61qmh"]
+[ext_resource type="PackedScene" uid="uid://bsdj2ewm07w0i" path="res://scenes/bed.tscn" id="4_o7dyq"]
+[ext_resource type="Texture2D" uid="uid://baqbxhorq5bnt" path="res://asset_2d/tiles/lavandino.png" id="5_441e1"]
+[ext_resource type="PackedScene" uid="uid://b06jw28xi7prd" path="res://scenes/bilancia.tscn" id="6_pfx57"]
+[ext_resource type="PackedScene" uid="uid://dakbroqn1lavq" path="res://scenes/photo.tscn" id="7_o7dyq"]
+[ext_resource type="PackedScene" uid="uid://bsmvdguk4gkti" path="res://scenes/casa.tscn" id="9_0wwxg"]
+[ext_resource type="PackedScene" uid="uid://ceowvqtnanywn" path="res://scenes/orsetto.tscn" id="10_gp8b1"]
+[ext_resource type="PackedScene" uid="uid://d3grjs10oqgk" path="res://scenes/porta_spazzolini.tscn" id="11_jp05t"]
+[ext_resource type="PackedScene" uid="uid://bjgu17i06m1h3" path="res://scenes/preservativi.tscn" id="12_b6o7g"]
+[ext_resource type="PackedScene" uid="uid://btd5u3si74s0p" path="res://scenes/relazione.tscn" id="13_jp05t"]
+[ext_resource type="PackedScene" uid="uid://dlx8v03sc36eu" path="res://scenes/scontrino.tscn" id="14_b6o7g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5grw"]
+texture = ExtResource("1_ofuf1")
+texture_region_size = Vector2i(64, 64)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -16)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -16)
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+2:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(-32, 0, -32.65551, 30.789478, 0, 48.05025, 0, 16)
+2:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(0, 16, 32, 0, 32.188995, 33.122013, -0.46650696, 48.516758)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -16)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -16)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rkpo5"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(64, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_u5grw")
+
+[sub_resource type="GDScript" id="GDScript_ofuf1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acpit"]
+texture = ExtResource("3_61qmh")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+0:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(0, 16, 0, 47.980278, 31.046066, 32.739487, 32, 0)
+0:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(-32, 0, -32.17502, 31.610535, -1.6934204, 47.415802, 0, 16)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -16)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, -32, 0, 0, 16, 32, 0)
+1:0/0/physics_layer_0/polygon_1/points = PackedVector2Array(0, 16, 0, 47.980278, 31.046066, 32.739487, 32, 0)
+1:0/0/physics_layer_0/polygon_2/points = PackedVector2Array(-32, 0, -32.17502, 31.610535, -1.6934204, 47.415802, 0, 16)
+
+[sub_resource type="TileSet" id="TileSet_pfx57"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(64, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_acpit")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_61qmh"]
+texture = ExtResource("2_rkpo5")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_acpit"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(64, 32)
+sources/0 = SubResource("TileSetAtlasSource_61qmh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jp05t"]
+size = Vector2(1156.7329, 568.45886)
+
+[node name="Stanza" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+tile_set = SubResource("TileSet_rkpo5")
+format = 2
+layer_0/name = "Level0"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(0, 262144, 0, 1, 262144, 0, -65535, 65536, 0, -65536, 65536, 0, -131072, 65536, 0, -131071, 65536, 0, -131070, 65536, 0, -65534, 65536, 0, 2, 262144, 0, 3, 65536, 0, -65533, 65536, 0, -131069, 65536, 0, -131068, 65536, 0, -65532, 65536, 0, 4, 65536, 0, 65540, 65536, 0, 131076, 65536, 0, 196612, 65536, 0, 262148, 65536, 0, 262147, 65536, 0, 262146, 65536, 0, 262145, 65536, 0, 262144, 262144, 0, 196608, 65536, 0, 131072, 65536, 0, 65536, 262144, 0, 65537, 262144, 0, 65538, 262144, 0, 65539, 65536, 0, 131075, 65536, 0, 196611, 65536, 0, 196610, 65536, 0, 196609, 65536, 0, 131073, 65536, 0, 131074, 65536, 0, -131067, 65536, 0, -65531, 65536, 0, 5, 65536, 0, 65541, 65536, 0, 131077, 65536, 0, 196613, 65536, 0, 262149, 65536, 0, 262150, 65536, 0, 196614, 65536, 0, 131078, 65536, 0, 65542, 65536, 0, 6, 65536, 0, 7, 65536, 0, -65530, 65536, 0, -131066, 65536, 0, -131065, 65536, 0, -65529, 65536, 0, 65543, 65536, 0, 131079, 65536, 0, 196615, 65536, 0, 262151, 65536, 0, 327687, 65536, 0, 327686, 65536, 0, 327685, 65536, 0, 327684, 65536, 0, 327683, 65536, 0, 327682, 65536, 0, 327681, 65536, 0, 327680, 65536, 0, 393215, 65536, 0, 327679, 65536, 0, 262143, 65536, 0, 196607, 65536, 0, 131071, 65536, 0, 65535, 65536, 0, -1, 65536, 0, -65537, 65536, 0, -196608, 65536, 0, -196607, 65536, 0, -196606, 65536, 0, -196605, 65536, 0, -196604, 65536, 0, -196603, 65536, 0, -196602, 65536, 0, -196601, 65536, 0, -131073, 65536, 0, -196600, 65536, 0, -131064, 65536, 0, -65528, 65536, 0, 8, 65536, 0, 9, 65536, 0, -65527, 65536, 0, -131063, 65536, 0, -196599, 65536, 0, -196598, 65536, 0, -131062, 65536, 0, -65526, 65536, 0, 10, 65536, 0, -196597, 65536, 0, -131061, 65536, 0, -65525, 65536, 0, 11, 65536, 0)
+layer_1/name = "Level1"
+layer_1/y_sort_enabled = true
+layer_1/y_sort_origin = 1
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(-131074, 262144, 0, -65538, 262144, 0, -2, 262144, 0, 65534, 262144, 0, 131070, 262144, 0, 196606, 262144, 0, 262142, 262144, 0, 327678, 262144, 0, -196609, 262144, 0, -262144, 262144, 0, -262143, 262144, 0, -262142, 262144, 0, -262141, 262144, 0, -262140, 262144, 0, -262139, 262144, 0, -262138, 131072, 0, -262137, 131072, 0)
+layer_2/name = "Level2"
+layer_2/y_sort_enabled = true
+layer_2/y_sort_origin = 2
+layer_2/z_index = 2
+layer_2/tile_data = PackedInt32Array(-196611, 196608, 0, -131075, 262144, 0, -65539, 262144, 0, -3, 196608, 0, 65533, 262144, 0, 131069, 262144, 0, 196605, 196608, 0, 262141, 262144, 0, -262146, 131072, 0, -262145, 131072, 0, -327680, 131072, 0, -327679, 131072, 0, -327678, 131072, 0, -327677, 131072, 0, -327676, 131072, 0, -327675, 131072, 0, -262147, 131072, 0, 327678, 131072, 0, 262142, 131072, 0, 196606, 131072, 0, 131070, 131072, 0, 65534, 131072, 0, -2, 131072, 0, -65538, 131072, 0, -131074, 131072, 0, -196610, 131072, 0, -196609, 131072, 0, -262144, 131072, 0, -262143, 131072, 0, -262142, 131072, 0, -262141, 131072, 0, -262140, 131072, 0, -262139, 131072, 0, -262138, 131072, 0, -327674, 131072, 0, -327673, 131072, 0, -262137, 131072, 0, -196601, 131072, 0, -262135, 131072, 0, -262136, 131072, 0)
+layer_3/name = "Level3"
+layer_3/y_sort_enabled = true
+layer_3/y_sort_origin = 3
+layer_3/z_index = 3
+layer_3/tile_data = PackedInt32Array(196604, 196608, 0, 131068, 196608, 0, 65532, 196608, 0, -4, 196608, 0, -65540, 196608, 0, -131076, 196608, 0, -196612, 196608, 0, -262148, 196608, 0, -327684, 196608, 0, -327683, 196608, 0, -327682, 196608, 0, -327681, 196608, 0, -393216, 196608, 0, -327675, 131072, 0, -327676, 131072, 0, -327677, 131072, 0, -327678, 131072, 0, -327679, 131072, 0, -327680, 131072, 0, -262145, 131072, 0, -262146, 131072, 0, -262147, 131072, 0, -196611, 131072, 0, -131075, 131072, 0, -65539, 131072, 0, -3, 131072, 0, 65533, 131072, 0, 131069, 131072, 0, 196605, 131072, 0, 262141, 131072, 0, -327674, 131072, 0, -393215, 131072, 0, -393214, 131072, 0, -393213, 131072, 0, -393212, 131072, 0, -393211, 131072, 0, -393210, 131072, 0, -262138, 131072, 0, -327672, 131072, 0, -327673, 131072, 0, -262134, 131072, 0, -196598, 131072, 0, -131062, 131072, 0, -65526, 131072, 0)
+layer_4/name = "Level4"
+layer_4/y_sort_enabled = true
+layer_4/y_sort_origin = 4
+layer_4/z_index = 4
+layer_4/tile_data = PackedInt32Array(-393220, 131072, 0, -393219, 131072, 0, -393218, 131072, 0, -393217, 131072, 0, 196604, 131072, 0, 131068, 131072, 0, 65532, 131072, 0, -4, 131072, 0, -65540, 131072, 0, -131076, 131072, 0, -196612, 131072, 0, -262148, 131072, 0, -327684, 131072, 0, -327683, 131072, 0, -327682, 131072, 0, -327681, 131072, 0, -393216, 131072, 0, -393215, 131072, 0, -393214, 131072, 0, -393213, 131072, 0, -393212, 131072, 0, -393211, 131072, 0, -458749, 131072, 0, -458750, 131072, 0, -458751, 131072, 0, -458752, 131072, 0, -327675, 131072, 0, -393209, 131072, 0, -393210, 131072, 0)
+layer_5/name = "Level5"
+layer_5/y_sort_enabled = true
+layer_5/y_sort_origin = 5
+layer_5/z_index = 5
+layer_5/tile_data = PackedInt32Array(131067, 131072, 0, 65531, 131072, 0, -5, 131072, 0, -65541, 131072, 0, -131077, 131072, 0, -196613, 131072, 0, -262149, 131072, 0, -327685, 131072, 0, -393221, 131072, 0, -393220, 131072, 0, -393219, 131072, 0, -393218, 131072, 0, -393217, 131072, 0, -458752, 131072, 0, -458751, 131072, 0, -458750, 131072, 0, -458749, 131072, 0, -458748, 131072, 0, -458747, 131072, 0, -458746, 131072, 0, -393212, 131072, 0)
+script = SubResource("GDScript_ofuf1")
+
+[node name="furniture" type="TileMapLayer" parent="TileMap"]
+z_index = 3
+y_sort_enabled = true
+texture_filter = 1
+tile_map_data = PackedByteArray("AAABAP3/AQABAAAAAAACAP3/AQABAAAAAAD//wMAAQAAAAAAAAAIAP3/AQABAAAAAAA=")
+tile_set = SubResource("TileSet_pfx57")
+
+[node name="wall_objects" type="TileMapLayer" parent="TileMap"]
+z_index = 6
+y_sort_enabled = true
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD9/wIAAAAAAAAAAAD9/wEAAAAAAAAAAAADAPv/AAACAAAAAAAEAPv/AAACAAAAAAD9////AAABAAAAAAAAAPr/AAADAAAAAAA=")
+tile_set = SubResource("TileSet_acpit")
+
+[node name="bed" parent="TileMap" instance=ExtResource("4_o7dyq")]
+
+[node name="lavandino" type="Sprite2D" parent="TileMap"]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(416, 128)
+texture = ExtResource("5_441e1")
+
+[node name="player" parent="." instance=ExtResource("2_u5grw")]
+z_index = 7
+y_sort_enabled = true
+position = Vector2(50, -15)
+speed = 150
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+
+[node name="Bilancia" parent="." instance=ExtResource("6_pfx57")]
+visible = false
+z_index = 20
+texture_filter = 1
+position = Vector2(97, 165)
+scale = Vector2(0.2, 0.2)
+
+[node name="interactables" type="Node2D" parent="."]
+
+[node name="photo" parent="interactables" instance=ExtResource("7_o7dyq")]
+z_index = 6
+position = Vector2(193.00002, -8)
+scale = Vector2(0.3, 0.3)
+
+[node name="porta_spazzolini" parent="interactables" instance=ExtResource("11_jp05t")]
+z_index = 3
+position = Vector2(409, 89)
+scale = Vector2(0.4, 0.4)
+
+[node name="preservativi" parent="interactables" instance=ExtResource("12_b6o7g")]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(-95, 59)
+
+[node name="relazione" parent="interactables" instance=ExtResource("13_jp05t")]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(160, -16)
+scale = Vector2(0.5, 0.5)
+
+[node name="scontrino" parent="interactables" instance=ExtResource("14_b6o7g")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(99, 128)
+scale = Vector2(0.8, 0.8)
+
+[node name="world_boundary" type="StaticBody2D" parent="."]
+position = Vector2(96, 256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world_boundary"]
+position = Vector2(-205.46956, 182.54245)
+rotation = -2.6811028
+shape = SubResource("RectangleShape2D_jp05t")
+
+[node name="orso" type="Node2D" parent="."]
+
+[node name="orsetto" parent="orso" instance=ExtResource("10_gp8b1")]
+z_index = 3
+position = Vector2(98, -35)
+
+[node name="casa" type="Node2D" parent="."]
+
+[node name="casa" parent="casa" instance=ExtResource("9_0wwxg")]
+z_index = 2
+position = Vector2(257, 48)

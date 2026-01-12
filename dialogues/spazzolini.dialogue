@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Throw it away
+	S.: .
+	do trigger_sequence_spazz_2(2)
+- Add yours
+	S.: .
+	do trigger_sequence_spazz_1(1)

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bhsnjan8cdqyw"
+path="res://.godot/imported/spazzolini.dialogue-1b47e9253f6ba8880371f2bdeca5a73a.tres"
+
+[deps]
+
+source_file="res://dialogues/spazzolini.dialogue"
+dest_files=["res://.godot/imported/spazzolini.dialogue-1b47e9253f6ba8880371f2bdeca5a73a.tres"]
+
+[params]
+
+defaults=true

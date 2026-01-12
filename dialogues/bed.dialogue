@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Ruin it
+	S.: .
+	do trigger_sequence_bed_2(2)
+- Adorn it
+	S.: .
+	do trigger_sequence_bed_1(1)

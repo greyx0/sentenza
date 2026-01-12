@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Use them
+	S.: .
+	do trigger_sequence_pre_2(2)
+- Take them out
+	S.: .
+	do trigger_sequence_pre_1(1)

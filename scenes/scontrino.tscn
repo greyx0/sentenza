@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dlx8v03sc36eu"]
+
+[ext_resource type="Script" uid="uid://ciqdbbqvdgah1" path="res://scripts/scontrino.gd" id="1_01y10"]
+[ext_resource type="Texture2D" uid="uid://bdact33v5yxo2" path="res://asset_2d/interactables/scontrino/scontrino.png" id="1_7dcqq"]
+[ext_resource type="Texture2D" uid="uid://pu41ano6etoi" path="res://asset_2d/interactables/scontrino/scontrino_1.png" id="2_01y10"]
+[ext_resource type="Resource" uid="uid://yios41x2imvb" path="res://dialogues/scontrino.dialogue" id="2_04br2"]
+[ext_resource type="Texture2D" uid="uid://b2uip01nbsmhr" path="res://asset_2d/Hand3.png" id="2_olwhy"]
+[ext_resource type="Texture2D" uid="uid://cdc28gynis2o2" path="res://asset_2d/interactables/scontrino/scontrino_2.png" id="3_04br2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olwhy"]
+size = Vector2(35, 64)
+
+[node name="scontrino" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
+script = ExtResource("1_01y10")
+hover_cursor = ExtResource("2_olwhy")
+dialogue_resource = ExtResource("2_04br2")
+ui_preview_rect = NodePath("CanvasLayer/CenterContainer/TextureRect")
+
+[node name="scontrino" type="Sprite2D" parent="."]
+texture = ExtResource("1_7dcqq")
+
+[node name="scontrino_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_01y10")
+
+[node name="scontrino_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_04br2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_olwhy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+mouse_filter = 0
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Refuse to pay
+	S.: .
+	do trigger_sequence_sconto_2(2)
+- Offer dinner again
+	S.: .
+	do trigger_sequence_sconto_1(1)

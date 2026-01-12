@@ -1,0 +1,9 @@
+~ start
+
+S.: .
+- Destroy it
+	S.: .
+	do trigger_sequence_house_2(2)
+- Cherish it
+	S.: .
+	do trigger_sequence_house_1(1)
