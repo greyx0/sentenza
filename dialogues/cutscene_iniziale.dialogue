@@ -1,7 +1,8 @@
 ~ start
-Anubis: . [next=auto]
-Anubis: . [next=auto]
-Anubis: . [next=auto]
-
+Anubis: Welcome. You already know why you are here, don't you?
+Anubis: You [wave amp=25 freq=5]committed[/wave] an [shake rate=20 level=10]unforgivable[/shake] act. And you are about to be judged for it.
+But I'm feeling generous today, and I've decided to give you a chance.
+Anubis: Justify your actions, prove you're worthy of redemption.
+Once you've made your choices I shall return, and you'll be judged once again.
 do start_game()
 => END

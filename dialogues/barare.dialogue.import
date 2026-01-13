@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bo8latwigsgk0"
+path="res://.godot/imported/barare.dialogue-9f5571613cf9e19702f4df2deefd1c60.tres"
+
+[deps]
+
+source_file="res://dialogues/barare.dialogue"
+dest_files=["res://.godot/imported/barare.dialogue-9f5571613cf9e19702f4df2deefd1c60.tres"]
+
+[params]
+
+defaults=true

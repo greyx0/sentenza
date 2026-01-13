@@ -37,6 +37,8 @@ func set_interacting(value: bool):
 		auto_mode = false
 		animated_sprite.play("idle")
 		stop_music()
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _physics_process(delta):
 	if is_interacting:

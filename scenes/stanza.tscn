@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://ckpveb7d6jmji"]
+[gd_scene load_steps=26 format=4 uid="uid://ckpveb7d6jmji"]
 
 [ext_resource type="Texture2D" uid="uid://b1bieqrs8wasy" path="res://asset_2d/tiles/sentenza_tilemap.png" id="1_ofuf1"]
 [ext_resource type="Texture2D" uid="uid://biwy60n1dqkth" path="res://asset_2d/tiles/oggetti_muro.png" id="2_rkpo5"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bjgu17i06m1h3" path="res://scenes/preservativi.tscn" id="12_b6o7g"]
 [ext_resource type="PackedScene" uid="uid://btd5u3si74s0p" path="res://scenes/relazione.tscn" id="13_jp05t"]
 [ext_resource type="PackedScene" uid="uid://dlx8v03sc36eu" path="res://scenes/scontrino.tscn" id="14_b6o7g"]
+[ext_resource type="PackedScene" uid="uid://d2lhjj4rmqhcs" path="res://scenes/bilancia_barare.tscn" id="15_b6o7g"]
+[ext_resource type="AudioStream" uid="uid://damdk85vw6g6k" path="res://audio/egypt-expedition-a-mysterious-artefact-119132.mp3" id="16_jqeec"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5grw"]
 texture = ExtResource("1_ofuf1")
@@ -163,9 +165,8 @@ position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 
 [node name="Bilancia" parent="." instance=ExtResource("6_pfx57")]
+layer = 10
 visible = false
-scale = Vector2(0.2, 0.2)
-transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
 [node name="interactables" type="Node2D" parent="."]
 
@@ -233,3 +234,13 @@ position = Vector2(98, -35)
 [node name="casa" parent="casa" instance=ExtResource("9_0wwxg")]
 z_index = 2
 position = Vector2(257, 48)
+
+[node name="bilancia_barare" parent="." instance=ExtResource("15_b6o7g")]
+z_index = 5
+position = Vector2(96.99999, 174.99998)
+scale = Vector2(0.2, 0.2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_jqeec")
+volume_db = -10.0
+autoplay = true

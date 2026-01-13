@@ -1,0 +1,4 @@
+~ start
+???: Have you thought about cheating?
+do GameEvents.last_cutscene()
+=> END

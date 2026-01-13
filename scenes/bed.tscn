@@ -18,6 +18,7 @@ z_index = 1
 script = ExtResource("1_853xm")
 hover_cursor = ExtResource("2_exsg2")
 dialogue_resource = ExtResource("2_x7btf")
+disappear_on_finish = false
 
 [node name="bed" type="Sprite2D" parent="."]
 z_index = 2
@@ -47,7 +48,7 @@ region_rect = Rect2(0, 0, 160, 116)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.0000019, 62)
-rotation = -5.664092
+rotation = 0.61909324
 shape = SubResource("SegmentShape2D_pfx57")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -60,10 +61,10 @@ shape = SubResource("CircleShape2D_x7btf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(37, 74)
-rotation = -7.8408704
+rotation = -1.557685
 shape = SubResource("SegmentShape2D_pfx57")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
 position = Vector2(-23, 114)
-rotation = -7.8408704
+rotation = -1.557685
 shape = SubResource("SegmentShape2D_pfx57")

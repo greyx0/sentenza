@@ -1,0 +1,14 @@
+~ start
+Anubis: You thought you could fool me. With your hollow excuses.
+You even tried to cheat me.
+You are just a pathetic bastard.
+Anubis: There is no redemption possible for you.
+The only way you have left to make the world a better place is if you remove yourself from it.
+The [wave amp=25 freq=5]V e r d i c t[/wave] has always been death.
+- Die
+	                          THE END
+	do back_to_menu()
+- Die
+	                          THE END
+	do back_to_menu()
+=> END

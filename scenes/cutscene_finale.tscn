@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://osxr8snklgj5"]
+[gd_scene load_steps=8 format=3 uid="uid://osxr8snklgj5"]
 
 [ext_resource type="Texture2D" uid="uid://dmd7ivb5nivrp" path="res://asset_2d/anubi/anubi_spritesheet.png" id="1_tb0tb"]
 [ext_resource type="Script" uid="uid://dlub6f7xud57p" path="res://scripts/anubi.gd" id="2_pgdgj"]
+[ext_resource type="Resource" uid="uid://sjs450ecc3ws" path="res://dialogues/cutscene_finale.dialogue" id="3_pgdgj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jln2q"]
 atlas = ExtResource("1_tb0tb")
@@ -58,8 +59,9 @@ layout_mode = 2
 [node name="anubi" type="AnimatedSprite2D" parent="CanvasLayer/CenterContainer/TextureRect"]
 z_index = 1
 position = Vector2(0, -100)
-scale = Vector2(4, 4)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_24pkh")
 animation = &"anubi_idle"
 autoplay = "anubi_idle"
 script = ExtResource("2_pgdgj")
+dialogue_resource = ExtResource("3_pgdgj")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2lhjj4rmqhcs"]
+
+[ext_resource type="Texture2D" uid="uid://cdh14ej3hyf50" path="res://asset_2d/bilancia/Bilancia_intera.png" id="1_ayx6p"]
+[ext_resource type="Script" uid="uid://beq77l4wp1xif" path="res://scenes/bilancia_barare.gd" id="1_gqbay"]
+[ext_resource type="Resource" uid="uid://bo8latwigsgk0" path="res://dialogues/barare.dialogue" id="2_1033k"]
+[ext_resource type="Texture2D" uid="uid://2c3v5nhmi43f" path="res://solo_piatti.png" id="2_gqbay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1033k"]
+size = Vector2(508, 427)
+
+[node name="bilancia_barare" type="Node2D"]
+script = ExtResource("1_gqbay")
+final_dialogue_resource = ExtResource("2_1033k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ayx6p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_gqbay")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_1033k")

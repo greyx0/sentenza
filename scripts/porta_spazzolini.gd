@@ -4,9 +4,13 @@ extends Node2D
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
 
+@export_group("Game Events Settings")
+@export var item_id: String = "toothbrush"
+@export var disappear_on_finish: bool = true
+
 @export_group("UI Settings")
 @export var ui_preview_rect: TextureRect 
-@export var extra_visibility_time: float = 1.5
+@export var extra_visibility_time: float = 0.9
 @export var fade_duration: float = 0.5
 
 @onready var sprite_1 = $porta_spazzolini
@@ -19,6 +23,11 @@ func _ready():
 	$Area2D.mouse_entered.connect(_on_mouse_entered)
 	$Area2D.mouse_exited.connect(_on_mouse_exited)
 	$Area2D.input_event.connect(_on_area_2d_input_event)
+
+	if GameEvents.collected_items.has(item_id) and disappear_on_finish:
+		queue_free()
+		return
+
 	if ui_preview_rect:
 		ui_preview_rect.modulate.a = 0 
 		ui_preview_rect.get_parent().visible = false
@@ -74,6 +83,22 @@ func _on_balloon_closed():
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		player.set_interacting(false)
+	
+	if disappear_on_finish:
+		handle_disappearance()
+
+func handle_disappearance():
+	GameEvents.register_item_collection(item_id)
+	sprite_1.visible = false
+	sprite_2.visible = false
+	sprite_3.visible = false
+	
+	collision_shape_2d.set_deferred("disabled", true)
+	
+	Input.set_custom_mouse_cursor(default_cursor)
+	
+	await get_tree().create_timer(0.1).timeout
+	queue_free()
 
 
 func trigger_sequence_spazz_1(choice_id: int):

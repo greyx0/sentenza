@@ -59,7 +59,7 @@ layout_mode = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/CenterContainer/TextureRect"]
 z_index = 1
 position = Vector2(0, -100)
-scale = Vector2(4, 4)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_le0r7")
 animation = &"anubi_idle"
 autoplay = "anubi_idle"

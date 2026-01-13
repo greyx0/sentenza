@@ -12,6 +12,7 @@ func _ready():
 func _on_interaction_received(choice_id: int):
 	match choice_id:
 		1:
+			await get_tree().create_timer(1.0).timeout
 			visible = true
 			await get_tree().create_timer(1.0).timeout
 			anim_player.play("tilt_destra")
@@ -22,6 +23,7 @@ func _on_interaction_received(choice_id: int):
 			await anim_player.animation_finished
 			visible = false
 		2:
+			await get_tree().create_timer(1.0).timeout
 			visible = true
 			await get_tree().create_timer(1.0).timeout
 			anim_player.play("tilt_sinistra")
