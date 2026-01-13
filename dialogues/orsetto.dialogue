@@ -1,9 +1,12 @@
 ~ start
 
-S.: .
+S.: Just one of the many gifts I got her, proof of my love for her.
+But nothing was ever enough for her.
+I got nothing in return for this either.
 - Forget about it
-	S.: .
+	S.: She didn’t even cherish it. She just left it to gather dust in a corner of her room.
 	do trigger_sequence_orsetto_2(2)
 - Buy a similar one
-	S.: .
+	S.: I got myself one too, she liked this sort of silly game. I even put up with playing with them together, like little kids. Embarrassing.
 	do trigger_sequence_orsetto_1(1)
+	

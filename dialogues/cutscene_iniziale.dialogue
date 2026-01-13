@@ -1,0 +1,7 @@
+~ start
+Anubis: . [next=auto]
+Anubis: . [next=auto]
+Anubis: . [next=auto]
+
+do start_game()
+=> END

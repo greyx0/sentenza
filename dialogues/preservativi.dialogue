@@ -1,9 +1,14 @@
 ~ start
 
-S.: .
+S.: It was only ever her that bought them, she was clearly asking me to do it.
+You just don’t behave that way if you truly don’t want to do it.
 - Use them
-	S.: .
+	S.: She would always wait for me to put them on before surrendering herself to me.
+	I’d look at her on the bed and you could see it in her eyes that it was all she wanted.
+	She was dying for it.
 	do trigger_sequence_pre_2(2)
 - Take them out
-	S.: .
+	S.: She’d always lay them out on the bedside table.
+	It became our little game. Every time I’d see them there, ready to be used, I knew she wanted me.
+	She wanted me. She wanted it. It was all she’d ever think about.
 	do trigger_sequence_pre_1(1)

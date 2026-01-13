@@ -1,9 +1,14 @@
 ~ start
 
-S.: .
+S.: After a little while we moved in together. We were happy, and everything was going well.
+Of course we’d do it often.
+What’s wrong with expecting what I’m owed?
 - Destroy it
-	S.: .
+	S.: I’d often break things and shout at her out of frustration.
+	It’s only natural, with everything she’d put me through.
 	do trigger_sequence_house_2(2)
 - Cherish it
-	S.: .
+	S.: It was a love-filled home, we never had any issues.
+	All her claims are just exaggerations, after all.
+	The way I acted was just because of how madly in love with her I was.
 	do trigger_sequence_house_1(1)

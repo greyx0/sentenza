@@ -1,9 +1,16 @@
 ~ start
 
-S.: .
+S.: [shake rate=20 level=10]My[/shake] Her favourite dress.
+She only wore it to excite me, it’s obvious.
 - Ruin it
-	S.: .
+	S.: I was overcome with jealousy when she wore it to go out with her friends.
+	Why would she wear it? To get touched by other men?
+	To tease them like she’d tease me?
+	I was the only one that had the right to touch her.
+	And she was begging me to.
 	do trigger_sequence_bed_2(2)
 - Adorn it
-	S.: .
+	S.: One evening she decided to wear this dress, pairing it with a selection of jewellery that I’d given her over the years.
+	She was asking me to do it.
+	It was her way of telling me she was mine and that she wanted me.
 	do trigger_sequence_bed_1(1)

@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3m2prugiijjm"]
+
+[ext_resource type="Texture2D" uid="uid://dmd7ivb5nivrp" path="res://asset_2d/anubi/anubi_spritesheet.png" id="1_bcs2s"]
+[ext_resource type="Script" uid="uid://dlub6f7xud57p" path="res://scripts/anubi.gd" id="2_yevf1"]
+[ext_resource type="Resource" uid="uid://dsc04noyg8cnu" path="res://dialogues/cutscene_iniziale.dialogue" id="3_yevf1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jln2q"]
+atlas = ExtResource("1_bcs2s")
+region = Rect2(0, 0, 80, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6ril"]
+atlas = ExtResource("1_bcs2s")
+region = Rect2(80, 0, 80, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clxll"]
+atlas = ExtResource("1_bcs2s")
+region = Rect2(160, 0, 80, 82)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_le0r7"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_jln2q")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_h6ril")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_clxll")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_clxll")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_h6ril")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_jln2q")
+}],
+"loop": true,
+"name": &"anubi_idle",
+"speed": 5.0
+}]
+
+[node name="cutscene_iniziale" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/CenterContainer/TextureRect"]
+z_index = 1
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_le0r7")
+animation = &"anubi_idle"
+autoplay = "anubi_idle"
+script = ExtResource("2_yevf1")
+dialogue_resource = ExtResource("3_yevf1")

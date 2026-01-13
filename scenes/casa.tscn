@@ -9,7 +9,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g3anh"]
 resource_local_to_scene = true
-size = Vector2(64, 40)
+size = Vector2(64, 64)
 
 [node name="casa" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
 script = ExtResource("1_d31c8")
@@ -23,7 +23,6 @@ texture = ExtResource("2_6lyl3")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_g3anh")
 
 [node name="casa_1" type="Sprite2D" parent="."]
@@ -44,8 +43,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
-mouse_filter = 0
+mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5

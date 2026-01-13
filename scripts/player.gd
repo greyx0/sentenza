@@ -8,6 +8,9 @@ var target = position
 var auto_mode = false
 var is_interacting = false
 
+func _ready():
+	target = position
+
 func _unhandled_input(event):
 	if is_interacting:
 		return
@@ -46,7 +49,8 @@ func _physics_process(delta):
 	if position.distance_to(target) > 5:
 		velocity = position.direction_to(target) * speed
 		move_and_slide()
-		update_animation()
+		if get_real_velocity().length() > 10:
+			update_animation()
 	else:
 		velocity = Vector2.ZERO
 		animated_sprite.play("idle")

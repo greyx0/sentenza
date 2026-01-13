@@ -1,9 +1,10 @@
 ~ start
 
-S.: .
+S.: A receipt from the restaurant we used to go to. I’d always pay for everything and would get nothing in return. Not even a thank you.
+It’s like she thought she was entitled to it.
 - Refuse to pay
-	S.: .
+	S.: It was always like that, and after it happened yet again I lost my temper. I got up and left, leaving her there in the restaurant to pay the hefty bill. I’d had enough.
 	do trigger_sequence_sconto_2(2)
 - Offer dinner again
-	S.: .
+	S.: Despite everything, I kept paying because I knew she couldn’t afford it. I am a gentleman after all.
 	do trigger_sequence_sconto_1(1)

@@ -1,9 +1,12 @@
 ~ start
 
-S.: .
+S.: We even got engaged, I remember how happy that made her.
+It’s obvious we’d have intimate relations during our engagement.
+She should have expected it.
 - Get married
-	S.: .
-	do trigger_sequence_rela_2(2)
-- Leave her
-	S.: .
+	S.: We got married in a hurry, no need for a grand ceremony.
+	It’s what she wanted after all, she couldn’t wait to come back home with me.
 	do trigger_sequence_rela_1(1)
+- Leave her
+	S.: The divorce proceedings were the last time I ever saw her.
+	do trigger_sequence_rela_2(2)

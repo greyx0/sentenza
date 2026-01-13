@@ -1,9 +1,12 @@
 ~ start
 
-S.: .
+S.: I started coming over to her place more often. We finally had a more intimate relationship, it didn’t feel like I was wasting time anymore.
 - Throw it away
-	S.: .
+	S.: The first thing I did [shake rate=20 level=10]after that day[/shake] was throw away the toothbrush she used to keep at my place.
+	I couldn’t stand seeing any sign of her presence.
 	do trigger_sequence_spazz_2(2)
 - Add yours
-	S.: .
+	S.: I even took my toothbrush with me. 
+	It was the first step towards living together.
+	And we finally started doing other things together too.
 	do trigger_sequence_spazz_1(1)

@@ -1,10 +1,10 @@
 ~ start
 
-S.: This is one of the first photos she send me. I met her online, and despite having only been talking for a few weeks she sends me this?
-What was I supposed to think? It's obvious she wanted me.
+S.: This is one of the first photos she ever sent me. I met her online and she sent me a photo like this after just a few weeks of chatting. 
+She clearly wanted me, what other explanation could there be?
 - Burn it
-	S.: I don't even wanna see her face anymore. [wave amp=25 freq=5]Judging[/wave] me for something I didn't do.
+	S.: I can't stand seeing her face anymore, over there [wave amp=25 freq=5]judging[/wave] me for something I didn't do.
 	do trigger_sequence_burned(2)
 - Frame it
-	S.: I even framed the photo and put it in full view in my room so that people would know she was mine.
+	S.: I even framed the photograph, and gave it pride of place in my room to make sure it was clear to everyone that she was mine and mine alone.
 	do trigger_sequence_framed(1)

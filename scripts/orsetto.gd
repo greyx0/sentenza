@@ -4,6 +4,7 @@ extends Node2D
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
 
+
 @export_group("UI Settings")
 @export var ui_preview_rect: TextureRect 
 @export var extra_visibility_time: float = 1.5
@@ -14,6 +15,7 @@ extends Node2D
 @onready var sprite_3 = $orsetto_2
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 @onready var default_cursor = preload("res://asset_2d/Arrow2.png")
+
 
 func _ready():
 	$Area2D.mouse_entered.connect(_on_mouse_entered)

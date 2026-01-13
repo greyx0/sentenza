@@ -55,7 +55,7 @@ shape = SubResource("SegmentShape2D_pfx57")
 [node name="dress_collision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(34.000004, 62.000004)
 rotation = -2.5224993
-scale = Vector2(3.3847716, 2.1652706)
+scale = Vector2(5.7430115, 2.4420817)
 shape = SubResource("CircleShape2D_x7btf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

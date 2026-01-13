@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cdc28gynis2o2" path="res://asset_2d/interactables/scontrino/scontrino_2.png" id="3_04br2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olwhy"]
-size = Vector2(35, 64)
+size = Vector2(39, 68)
 
 [node name="scontrino" type="Node2D" node_paths=PackedStringArray("ui_preview_rect")]
 script = ExtResource("1_01y10")
@@ -43,8 +43,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/CenterContainer"]
-custom_minimum_size = Vector2(200, 200)
+z_index = 1
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-mouse_filter = 0
+mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
